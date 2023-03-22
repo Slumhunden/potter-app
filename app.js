@@ -26,4 +26,28 @@ function initApp() {
         potterActor,
         potterImage
     );
+ showCharacter(
+    potterImage,
+   potterName,
+   potterGender,
+   potterHouse,
+   potterDateOfBirth,
+   potterAncestry,
+   potterEyeColour,
+   potterHairColour,
+   potterActor,
+ );
+}
+function showCharacter(image,name,house,dateOfBirth, actor){
+console.log(image,name,house,dateOfBirth,actor)
+const myHTML = /*HTML*/ `
+<article><img src=${image}>
+                <h2>${name}</h2>
+                <p>${house}</p>
+                <p>${dateOfBirth}</p>
+                <p>${actor}</p>
+            </article>
+            `;
+document.querySelector("#characters").insertAdjacentHTML("beforeend",myHTML);
+
 }
