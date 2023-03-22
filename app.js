@@ -104,14 +104,13 @@ function initApp() {
   showCharacter(harry);
   showCharacter(ron);
   showCharacter(hermione);
-  showCharacter(draco)
-  document
-    .querySelector("#characters article:last-child")
+  showCharacter(draco);
+  document.querySelector("#characters article:last-child")
     .addEventListener("click", characterClicked);
 }
-function showCharacter(character){
-    console.log(character)
-const myHTML = /*HTML*/ `
+function showCharacter(character) {
+  console.log(character);
+  const myHTML = /*HTML*/ `
 <article>
                 <h2>${character.name}</h2>
                 <img src= "${character.image}">
@@ -120,6 +119,17 @@ const myHTML = /*HTML*/ `
                 <p>${character.actor}</p>
             </article>
             `;
-document.querySelector("#characters").insertAdjacentHTML("beforeend",myHTML);
+  document.querySelector("#characters").insertAdjacentHTML("beforeend", myHTML);
+  document
+    .querySelector("#characters article:last-child")
+    .addEventListener("click", characterClicked);
 
+  function characterClicked(character) {
+    console.log(character);
+
+    document.querySelector("#fullName").textContent = character.name;
+
+    document.querySelector("#dialog_image").src = character.image;
+    document.querySelector("#characterbox").showModal();
+  }
 }
