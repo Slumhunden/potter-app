@@ -5,6 +5,10 @@ window.addEventListener("load", initApp);
 
 function initApp() {
     // Harry Potter
+    const gyarados ={
+        name: "Gyarados",
+        
+    }
     const potterName = "Harry Potter";
     const potterGender = "male";
     const potterHouse = "Gryffindor";
