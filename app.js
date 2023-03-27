@@ -101,13 +101,16 @@ function initApp() {
     alive: true,
     image: "http://hp-api.herokuapp.com/images/draco.jpg",
   };
-  showCharacter(harry);
-  showCharacter(ron);
-  showCharacter(hermione);
-  showCharacter(draco);
+  showCharacter(students [0])
+  showCharacter(students [1])
+  showCharacter(students [2])
+
+  
   document.querySelector("#characters article:last-child")
     .addEventListener("click", characterClicked);
 }
+const students = [harry,ron,hermione]
+
 function showCharacter(character) {
   console.log(character);
   const myHTML = /*HTML*/ `
